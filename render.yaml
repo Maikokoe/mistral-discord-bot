@@ -1,6 +1,10 @@
 services:
   - type: web
-    name: mistral-bot
+    name: mistral-discord-bot
     env: docker
     plan: free
-    autoDeploy: false
+    autoDeploy: true
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+
